@@ -36,7 +36,7 @@ const Navbar = () => {
             <button class="
             relative after:absolute  py-3 px-7 bg-transparent border-2  text-primary-color rounded-lg   border-primary-color  hover:text-[#081B29] after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:transition-transform after:duration-500 after:content-[''] duration-500
             after:origin-top-left after:hover:scale-x-100 after:scale-x-0
-             transition-colors   after:bg-primary-color  ">Resume</button>
+             transition-colors   after:bg-primary-color overflow-hidden ">Resume</button>
            
         </ul>
         </div>
