@@ -1,0 +1,20 @@
+body{
+    background: #081B29;
+}
+
+.button-me{
+    position: relative;
+}
+.button-me::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.button-me:hover::after{
+    width: 0;
+    transition-duration: .5s;
+}
