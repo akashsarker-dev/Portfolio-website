@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from './component/Navbar/Navbar'
 import About from './component/about/About'
 import Banner from './component/banner/Banner'
+import Card from './component/card/Card'
+import Project from './component/project/Project'
 
 function App() {
 
@@ -11,6 +13,8 @@ function App() {
       <Navbar></Navbar>
         <Banner></Banner>
       <About></About>
+      <Card></Card>
+      
     </>
   )
 }
