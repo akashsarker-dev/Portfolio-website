@@ -1,4 +1,7 @@
 import React from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 import { BsFacebook, BsGithub,BsLinkedin} from 'react-icons/bs';
 import  'flowbite'
 
@@ -6,7 +9,7 @@ const Banner = () => {
   return (
     <>
     <div className='flex  max-w-container mx-auto items-center'>
-        <div className='w-1/2 py-20 '>
+        <div className='w-1/2 py-20 ' data-aos="zoom-in-left" data-aos-duration="2000">
         <h1 className='text-text-color text-6xl font-bold '>Hi, I'm Akash Sarker</h1>
         <h3 className='text-3xl text-primary-color font-bold my-3'>Fontend Devloper</h3>
         <p className='text-text-color'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odit suscipit debitis tempore voluptates, commodi hic mollitia harum adipisci sequi praesentium, nihil, et asperiores itaque. Reiciendis quisquam excepturi libero sunt accusamus tempora natus eligendi voluptatem, reprehenderit, animi, est tenetur nisi! Omnis iure in amet libero, dignissimos nihil aut quae reprehenderit.</p>
@@ -29,7 +32,7 @@ const Banner = () => {
 
       
         </div>
-        <div>
+        <div data-aos="zoom-in-right" data-aos-duration="2000">
         <img className='rounded-full ml-40 scale-75 outline outline-offset-2 outline-2 p-1 outline-white ' src="../public/banner.png" alt="" />
         </div>
     </div>
