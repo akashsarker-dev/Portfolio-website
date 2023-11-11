@@ -1,63 +1,120 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react'
+import ProjectImg from '../../assets/slider.png'
+import {AiFillEye }from 'react-icons/ai'
+import {BiCodeAlt }from 'react-icons/bi'
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-
-export default function Project() {
+const Project = () => {
   return (
-    <>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
-    </>
-  );
+    <div className='mx-auto max-w-container'>
+      <h2 className='text-center text-[50px] mb-[86px] py-24 font-bold text-text-color'>My <span className='text-primary-color '>Project</span></h2>
+      <div className='flex  flex-wrap gap-12'>
+
+
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+      <div className='relative group'>
+        <img src={ProjectImg} alt="" />
+        <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
+          <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
+          <p className='text-text-color text-sm font-medium mt-2.5 mb-5'>Full-Stack Instagram Clone Built Using MERN Stack And Realtime Chat With The Help Of Socket.io</p>
+          <div className='flex justify-between'>
+
+
+          <button className="flex items-center w-[120px] justify-center text-white rounded-md  text-lg gap-x-2 py-3 px-5 gap-3 border-2  font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">View<AiFillEye></AiFillEye></button>
+          
+
+          <button className='flex items-center w-[120px] justify-center text-white rounded-md text-lg gap-x-2 py-3 px-5 gap-3 border-2 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500'>Code<BiCodeAlt className='text-2xl'/></button>
+          </div>
+        </div> 
+
+      </div>
+
+      </div>
+      <div className='flex justify-center mt-16'>
+      <button className="relative  font-bold after:absolute overflow-hidden py-3 px-7 bg-transparent border-2  text-primary-color rounded-lg   border-primary-color  hover:text-[#081B29] after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:transition-transform after:duration-500 after:content-[''] duration-500 after:origin-top-left after:hover:scale-x-100 after:scale-x-0
+      transition-colors after:bg-primary-color">View All</button>
+      </div>
+      
+    </div>
+  )
 }
+
+export default Project

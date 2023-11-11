@@ -5,7 +5,7 @@ import  'flowbite'
 const Navbar = () => {
   return (
     <div>
-    <nav className="bg-transparent border-gray-200 max-w-container mx-auto">
+    <nav className="bg-transparent border-gray-200 duration-300  max-w-container mx-auto">
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" className="flex items-center">
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Akash Sarker</span>
@@ -17,7 +17,7 @@ const Navbar = () => {
             </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg  md:flex-row gap-x-11  md:mt-0 md:border-0  items-center ">
+        <ul className="font-medium flex  flex-col p-4 md:p-0 mt-4 rounded-lg  md:flex-row gap-x-11  md:mt-0 md:border-0  items-center ">
             <li>
             <a href="#" className="block   text-text-color md:bg-transparent" aria-current="page">Home</a>
             </li><li>

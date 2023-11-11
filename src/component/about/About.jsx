@@ -17,12 +17,10 @@ const About = () => {
        <div className='flex flex-col items-center'>
        <h3 className=' text-text-color text-3xl font-bold '>Fontent Developer</h3>
         <p className='text-center text-text-color py-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus id eaque sunt molestiae possimus quasi repellendus esse dolorum repellat praesentium nulla quibusdam nesciunt dicta at vitae pariatur saepe officiis modi earum ea iusto, deleniti optio sequi? Iure, nisi id. Nisi laborum sit, neque fuga recusandae esse sapiente beatae quod ut omnis. Aut voluptas voluptatibus cum cupiditate laboriosam atque libero placeat.</p>
-        <button id="btn" className="relative after:absolute overflow-hidden py-3 px-7 bg-transparent border-2  text-primary-color rounded-lg   border-primary-color  hover:text-[#081B29] after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:transition-transform after:duration-500 after:content-[''] duration-500
+
+        <button id="btn" className="relative after:absolute overflow-hidden py-3 px-7 bg-transparent border-2 font-semibold text-primary-color rounded-lg   border-primary-color  hover:text-[#081B29] after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:transition-transform after:duration-500 after:content-[''] duration-500
         after:origin-top-left after:hover:scale-x-100 after:scale-x-0
-        transition-colors   after:bg-primary-color z-10 ">Resume</button>
-
-        
-
+        transition-colors after:bg-primary-color z-10 ">Resume</button>
        </div>
         
       </div>
