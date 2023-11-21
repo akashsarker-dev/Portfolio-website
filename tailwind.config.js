@@ -2,8 +2,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
     
@@ -16,12 +15,11 @@ module.exports = {
         'button-text': '#081B29',
       },
       maxWidth: {
-        'container': '1140px',
+        'container': '1200px',
       },
       
     },
   },
   
-  plugins: [ require('flowbite/plugin')],
-  
+ plugins: [require('preline/plugin')],
 };

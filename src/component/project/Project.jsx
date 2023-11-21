@@ -6,11 +6,12 @@ import {BiCodeAlt }from 'react-icons/bi'
 const Project = () => {
   return (
     <div className='mx-auto max-w-container'>
-      <h2 className='text-center text-[50px] mb-[86px] py-24 font-bold text-text-color'>My <span className='text-primary-color '>Project</span></h2>
+      <h2 className='text-center md:text-[50px] text-4xl py-12 md:py-24 font-bold text-text-color'>My <span className='text-primary-color '>Project</span></h2>
+
       <div className='flex  flex-wrap gap-12'>
 
 
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
@@ -26,7 +27,7 @@ const Project = () => {
         </div> 
 
       </div>
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
@@ -42,7 +43,7 @@ const Project = () => {
         </div> 
 
       </div>
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
@@ -58,7 +59,7 @@ const Project = () => {
         </div> 
 
       </div>
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
@@ -74,7 +75,7 @@ const Project = () => {
         </div> 
 
       </div>
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>
@@ -90,7 +91,7 @@ const Project = () => {
         </div> 
 
       </div>
-      <div className='relative group'>
+      <div className='relative group mx-auto'>
         <img src={ProjectImg} alt="" />
         <div className='absolute overflow-hidden pb-5 px-6 group-hover:h-[202px] duration-300  bottom-0 left-0 w-full bg-[#173F5C] group-hover:bg-[rgba(23,63,92,0.95)] h-10 rounded-b-[20px] '>
           <p className='text-center mt-1 text-[#EDEDED] text-xl font-bold'>Chattting Application</p>

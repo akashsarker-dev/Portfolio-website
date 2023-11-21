@@ -1,6 +1,6 @@
 
 import './App.css'
-import Navbar from './component/Navbar/Navbar'
+import Navbar from './component/Nabvar/Navbar'
 import About from './component/about/About'
 import Banner from './component/banner/Banner'
 import Contact from './component/contact/Contact'
@@ -11,15 +11,15 @@ import Skill from './component/skill/Skill'
 function App() {
 
   return (
-    <>
-      <Navbar></Navbar>
+    <div className='px-2'>
+    {/* <Navbar></Navbar> */}
       <Banner></Banner>
       <About></About>
       <Project></Project>
-      {/* <Skill></Skill> */}
+      <Skill></Skill>
       <Contact></Contact>
       <CopyRight></CopyRight>
-    </>
+    </div>
   )
 }
 
