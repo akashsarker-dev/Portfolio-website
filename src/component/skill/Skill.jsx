@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Circle } from "rc-progress";
-
+import "aos/dist/aos.css";
 class Skill extends React.Component {
   constructor(props) {
     super(props);
@@ -30,17 +30,17 @@ class Skill extends React.Component {
     return (
       <>
         <>
-          <h2 className="text-center py-16  text-[50px]  font-bold text-text-color">
+          <h2 className="text-center py-16 text-3xl md:text-4xl   font-bold text-text-color">
             My<span className="text-primary-color"> Skills</span>
           </h2>
 
-          <div className="flex gap-x-14 flex-wrap justify-between max-w-container mx-auto">
-            <div className="md:w-6/12">
+          <div className="gap-x-14 gap-y-14 flex flex-wrap mx-auto max-w-container">
+            <div className="lg:w-6/12 w-full">
               <h2 className="text-2xl font-bold text-white mb-5">
                 Coding <span className="text-primary-color">Skills</span>
               </h2>
-              <div className="bg-[#112E42] justify-center flex flex-wrap gap-4 py-9 px-9 rounded-2xl border-primary-color border-2">
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+              <div className="bg-[#112E42] grid  grid-cols-2 sm:grid-cols-3 px-5 mx-auto gap-4 py-9 xl:px-9 rounded-2xl border-primary-color border-2">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -53,7 +53,7 @@ class Skill extends React.Component {
                     Tailwind css
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -66,7 +66,7 @@ class Skill extends React.Component {
                     Tailwind css
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -79,7 +79,7 @@ class Skill extends React.Component {
                     Tailwind css
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -92,7 +92,7 @@ class Skill extends React.Component {
                     Tailwind css
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -105,7 +105,7 @@ class Skill extends React.Component {
                     Tailwind css
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 border-2 border-primary-color bg-transparent rounded-xl">
+                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
                   <Circle
                     style={{ margin: 10, width: 90 }}
                     strokeWidth={10}
@@ -121,8 +121,8 @@ class Skill extends React.Component {
               </div>
             </div>
 
-            <div className="md:w-5/12">
-              <h2 className=" mb-5  text-[25px] font-bold text-text-color">
+            <div className="lg:w-5/12 w-full">
+              <h2 className=" mb-5 py-5 md:p-0 text-[25px] font-bold text-text-color">
                 My creative
                 <span className="text-primary-color">
                   {" "}

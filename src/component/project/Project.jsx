@@ -8,7 +8,7 @@ const Project = () => {
     <div className='mx-auto max-w-container'>
       <h2 className='text-center md:text-[50px] text-4xl py-12 md:py-24 font-bold text-text-color'>My <span className='text-primary-color '>Project</span></h2>
 
-      <div className='flex  flex-wrap gap-12'>
+      <div className='grid lg:grid-cols-3 sm:grid-cols-2  gap-4'>
 
 
       <div className='relative group mx-auto'>
