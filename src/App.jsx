@@ -1,6 +1,6 @@
 
 import './App.css'
-import Navbar from './component/Nabvar/Navbar'
+import Nav from './component/Navbar/Nav'
 import About from './component/about/About'
 import Banner from './component/banner/Banner'
 import Contact from './component/contact/Contact'
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className='px-2'>
-    {/* <Navbar></Navbar> */}
+      <Nav></Nav>
       <Banner></Banner>
       <About></About>
       <Project></Project>
