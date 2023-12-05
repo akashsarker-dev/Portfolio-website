@@ -11,11 +11,11 @@ import { TypeAnimation } from 'react-type-animation';
 const Banner = () => {
   return (
     <>
-      <div className="flex  px-2 max-w-container mx-auto pt-5  md:py-20 sm:items-center">
+      <div className="flex px-2 max-w-container mx-auto pt-5 items-center ">
         <div className="sm:w-1/2 md:py-20  py-14"
           data-aos="zoom-in-left"
-          data-aos-duration="2000"
-        >
+          data-aos-duration="2000">
+
           <h1 className="text-text-color leading-relaxed sm:w-64 md:w-96 md:text-5xl text-3xl font-bold ">
           Hi, I'm
           <span className="block leading-relaxed">Akash Sarker</span>
@@ -52,7 +52,7 @@ const Banner = () => {
         </div>
         <div className="sm:w-1/2 hidden sm:block" data-aos="zoom-in-right" data-aos-duration="2000">
           <img
-            className="rounded-full sm:scale-50 lg:ml-28  md:scale-75 outline outline-offset-2 outline-2 p-1 outline-white "
+            className="rounded-full sm:scale-50 lg:ml-40 md:scale-75 outline outline-offset-2 outline-2 p-1 outline-white "
             src={BannerImg}
             alt=""
           />

@@ -1,12 +1,53 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { BiSolidUser } from "react-icons/bi";
 import { BsFillTelephoneFill, BsFillSendFill } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
-
+import emailjs from '@emailjs/browser';
 const Contact = () => {
-  const handleForm = () => {
-    console.log("jdhfuih");
+
+  const form = useRef();
+
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+    subject_name: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: formData.user_name,
+      from_email: formData.user_email,
+      message: formData.message,
+      subject: formData.subject_name,
+    };
+
+    const serviceId = 'service_tw4tzqu';
+    const templateId = 'template_50878gn';
+    const userId = 'aibuKa_1To9LUCPDK';
+
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        setFormData({
+          user_name: '',
+          user_email: '',
+          message: '',
+          subject_name: ''
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+      });
+  };
+
+  
   return (
     <div className="md:py-20 py-12">
       <h2 className="text-center text-3xl md:text-4xl md:text-[50px] mb-12 md:mb-[90px] font-bold text-text-color">
@@ -60,46 +101,47 @@ const Contact = () => {
         </div>
 
         <div className="w-full sm:w-auto">
-          <form onSubmit={handleForm}>
+          <form ref={form} onSubmit={handleSubmit}>
             <div class="relative md:w-96">
-              <input
-                required
-                id="floating_filled"
-                class="block px-5 pb-2.5 h-16 pt-4 w-full border-2 text-white bg-transparent rounded-md border-1  border-primary-color text-lg appearance-none focus:outline-none  peer"
-                placeholder=" "
-              />
+              <input onChange={handleChange} value={formData.user_name} type="text" name="user_name"
+                required id="floating_filled" 
+                class="block px-5  h-14 w-full border-2 text-white bg-transparent rounded-md border-1  border-primary-color text-lg appearance-none focus:outline-none  peer"
+                placeholder=" " />
               <label
-                for="floating_filled"
-                class="absolute text-text-color  duration-300 transform -translate-y-4 text-lg scale-75 top-2 bg-[#081B29] px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3"
-              >
+                htmlFor="floating_filled"
+                class="absolute text-text-color  duration-300 transform -translate-y-4 text-lg scale-75 top-2 bg-[#081B29] px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3" >
                 Full Name
               </label>
             </div>
-
+            
             <div class="relative md:w-96 my-5">
-              <input
-                required
-                id="subject"
-                class="block px-5 pb-2.5 h-16 pt-4 w-full border-2 text-white bg-transparent rounded-md border-1  border-primary-color text-lg appearance-none focus:outline-none  peer"
-                placeholder=" "
-              />
+              <input onChange={handleChange} type="text" value={formData.subject_name}  name="subject_name"
+                required id="subject_name"
+                class="block h-14 px-3  w-full border-2 text-white bg-transparent rounded-md border-1  border-primary-color text-lg appearance-none focus:outline-none  peer"
+                placeholder=" " />
               <label
-                for="subject"
-                class="absolute text-text-color  duration-300 transform -translate-y-4 text-lg scale-75 top-2 bg-[#081B29] px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3"
-              >
+                htmlFor="subject_name"
+                class="absolute text-text-color  duration-300 transform -translate-y-4 text-lg scale-75 top-2 bg-[#081B29] px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3" >
                 Subject
               </label>
             </div>
 
-            <div class="relative w-full my-5">
-              <textarea
-                id="comment"
-                class="w-full focus:outline-none h-[136px] text-white border-2 rounded-md border-primary-color rounded-l p-5 text-sm  bg-transparent focus:border-primary-color focus:shadow-transparent focus:shadow-none"
-                placeholder="Write a comment..."
-                required
-              ></textarea>
+            <div class="relative md:w-96 ">
+              <input onChange={handleChange} value={formData.user_email} required type="email" placeholder=" "
+                name="user_email" id="email"
+                class="block h-14 px-3  w-full border-2 text-white bg-transparent rounded-md border-1  border-primary-color text-lg appearance-none focus:outline-none  peer"
+                 />
+              <label htmlFor="email"
+                class="absolute text-text-color  duration-300 transform -translate-y-4 text-lg scale-75 top-2 bg-[#081B29] px-2 peer-focus:px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3">
+                Enter You Email
+              </label>
             </div>
-            <button className="flex items-center justify-center text-primary-color rounded-md text-xl gap-3 w-full border-2 py-3 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">
+
+            <div class="relative w-full my-5">
+              <textarea  onChange={handleChange} value={formData.message} name="message" id="comment" placeholder="Write a comment..." 
+                class="w-full focus:outline-none h-[100px] text-white border-2 rounded-md border-primary-color rounded-l p-5 text-sm  bg-transparent focus:border-primary-color focus:shadow-transparent focus:shadow-none" required ></textarea>
+            </div>
+            <button type="submit" value="Send" className="flex items-center justify-center text-primary-color rounded-md text-xl gap-3 w-full border-2 py-3 font-bold border-primary-color bg-[#112E42] hover:bg-primary-color hover:text-white duration-500">
               Send Message <BsFillSendFill />
             </button>
           </form>
