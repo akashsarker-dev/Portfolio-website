@@ -14,7 +14,6 @@ const Home = () => {
       <Skill></Skill>
       <Project></Project>
       <Contact></Contact>
-      <CopyRight></CopyRight>
     </>
   );
 };
