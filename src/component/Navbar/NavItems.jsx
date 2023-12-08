@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const NavItems = () => {
@@ -24,6 +24,8 @@ const NavItems = () => {
       link: "/contact",
     },
   ];
+
+ 
   return (
     <>
       {Links.map((link, i) => (

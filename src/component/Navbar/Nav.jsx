@@ -69,7 +69,7 @@ const Nav = () => {
             }} to={link.link}>{link.name}</NavLink>
         </li>
       ))}
-        <button className="button-me md:py-2 md:px-5 py-2 px-5 font-semibold text-base overflow-hidden  border-primary-color border-2 rounded-full md:rounded-lg after:bg-primary-color text-button-text after:z-[-10] hover:text-primary-color  ">Resume</button>
+        <button className="button-me md:py-6 py-2 px-5 font-semibold text-base overflow-hidden  border-primary-color border-2 rounded-full md:rounded-lg after:bg-primary-color text-button-text after:z-[-10] hover:text-primary-color">Resume</button>
       </ul>
 
       <div className="text-2xl md:hidden z-50 " onClick={() => setOpen(!open)}>

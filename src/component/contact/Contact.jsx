@@ -57,10 +57,7 @@ const Contact = () => {
         console.error('Failed to send email:', error);
       });
   };
-const handle =()=>{
- 
-  console.log('dddddddd');
-}
+
   
   return (
     <div className="md:py-20 py-12">
@@ -159,7 +156,6 @@ const handle =()=>{
               Send Message <BsFillSendFill />
             </button>
           </form>
-          <button onClick={handle} type="button">assssssss</button>
         </div>
       </div>
     </div>
