@@ -1,12 +1,15 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutImg from '../../assets/about.png'
+import Tabs from '../../component/tabs/Tabs'
 AOS.init();
 
 
 const About = () => {
   
   return (
+    <>
+    
     <div className=' py-12 md:py-20 bg-second-primary-color' data-aos="zoom-in"
     data-aos-duration="2000">
         <div className='mx-auto max-w-container '>
@@ -15,7 +18,7 @@ const About = () => {
         <img className='mx-auto py-6 md:mt-14 md:mb-8 scale-75 md:scale-100' src={AboutImg} alt="" />
         
        <div className='flex flex-col items-center'>
-       <h3 className=' text-text-color text-3xl font-bold '>Fontent Developer</h3>
+       <h3 className=' text-text-color text-3xl font-bold '>Frontend Developer</h3>
         
         <p className='text-center line-clamp-3 mb-5 text-text-color py-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus id eaque sunt molestiae possimus quasi repellendus esse dolorum repellat praesentium nulla quibusdam nesciunt dicta at vitae pariatur saepe officiis modi earum ea iusto, deleniti optio sequi? Iure, nisi id. Nisi laborum sit, neque fuga recusandae esse sapiente beatae quod ut omnis. Aut voluptas voluptatibus cum cupiditate laboriosam atque libero placeat.</p>
 
@@ -26,6 +29,8 @@ const About = () => {
         
       </div>
     </div>
+      <Tabs></Tabs>
+        </>
   )
 }
 

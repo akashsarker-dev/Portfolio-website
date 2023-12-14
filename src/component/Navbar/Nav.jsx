@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -48,8 +48,9 @@ const Nav = () => {
   return (
     <>
       <div className="bg-[#0d2b41] left-0 sticky top-0 z-20 px-2 bg-[#0e2c42f2] ">
-        <nav className="flex justify-between max-w-container mx-auto py-4 ">
-          <h1 className="text-[#EDEDED] text-2xl font-semibold">Akash Sarker</h1>
+        <nav className="flex justify-between items-center max-w-container mx-auto py-4 ">
+          <h1 className="text-[#EDEDED] text-2xl font-semibold">
+            <Link to=''>Akash Sarker</Link></h1>
 
           {/* Desktop Nav */}
           <ul className="md:flex hidden items-center gap-10 text-[#EDEDED]">
