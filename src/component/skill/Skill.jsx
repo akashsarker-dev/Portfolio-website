@@ -1,177 +1,102 @@
-import * as React from "react";
-import { Circle } from "rc-progress";
-import "aos/dist/aos.css";
-class Skill extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      percent: 0,
-    };
-    this.increase = this.increase.bind(this);
-  }
+import React, { useState } from "react";
 
-  componentDidMount() {
-    this.increase();
-  }
+const Skill = () => {
+  const tabsData = ["Frontend", "Backend", "Others"];
+  const [selectedComponent, setSelectedComponent] = useState(0);
 
-  increase() {
-    const { percent } = this.state;
-    const newPercent = percent + 1;
-    if (newPercent >= 91) {
-      clearTimeout(this.tm);
-      return;
-    }
-    this.setState({ percent: newPercent });
-    this.tm = setTimeout(this.increase, 15);
-  }
+  const handleClick = (component) => {
+    setSelectedComponent(component);
+  };
 
-  render() {
-    const { percent } = this.state;
-    return (
-      <>
-        <>
-          <h2 className="text-center py-16 text-3xl md:text-4xl   font-bold text-text-color">
-            My<span className="text-primary-color"> Skills</span>
-          </h2>
+  const imagesData = [
+    { title: "JavaScript", url: "https://i.ibb.co/jJmYdTx/div-h-20.png" },
+    { title: "NextJS", url: "https://i.ibb.co/Kr9W1LG/next-js.png" },
+    { title: "ReactJS", url: "https://i.ibb.co/2vLDDs2/div-h-20-2.png" },
+    { title: "Redux", url: "https://i.ibb.co/vdRHjJq/div-h-20-3.png" },
+    { title: "Tailwind", url: "https://i.ibb.co/XCcwVnG/div-h-20-5.png" },
+    { title: "Material UI", url: "https://i.ibb.co/GR7b4YZ/div-h-20-6.png" },
+    { title: "Chakra UI", url: "https://i.ibb.co/HNMQpmt/div-h-20-7.png" },
+    { title: "HTML5", url: "https://i.ibb.co/VwwLfTX/div-h-20-8.png" },
+    { title: "CSS3", url: "https://i.ibb.co/cYPHTz2/div-h-20-9.png" },
+    { title: "Bootstrap", url: "https://i.ibb.co/mtHzwdY/div-h-20-10.png" },
+  ];
 
-          <div className="gap-x-14 gap-y-14 flex flex-wrap mx-auto max-w-container">
-            <div className="lg:w-6/12 w-full">
-              <h2 className="text-2xl font-bold text-white mb-5">
-                Coding <span className="text-primary-color">Skills</span>
-              </h2>
-              <div className="bg-[#112E42] grid  grid-cols-2 sm:grid-cols-3 px-5 mx-auto gap-4 py-9 xl:px-9 rounded-2xl border-primary-color border-2">
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
+  const backend = [
+    { title: "express-js", url: "https://i.ibb.co/9v9vYwZ/express-js.png" },
+    { title: "firebase", url: "https://i.ibb.co/XyYw5GJ/firebase.png" },
+    { title: "node-js", url: "https://i.ibb.co/L5pfVQK/node-js.png" },
+    { title: "mongodb", url: "https://i.ibb.co/VCdPbQ4/mongodb.png" },
+  ];
+
+  const other = [
+    { title: "React-native", url: "https://i.ibb.co/nmKckMf/React-native.png" },
+    { title: "Github", url: "https://i.ibb.co/g7H6w7B/github.png" },
+    { title: "Git", url: "https://i.ibb.co/2P98Csp/Git.png" },
+    { title: "Googling", url: "https://i.ibb.co/sPfT6j4/google.png" },
+  ];
+
+  return (
+    <div className="max-w-container mx-auto">
+      <h2 className="text-center py-16 text-3xl md:text-4xl   font-bold text-text-color">
+        My<span className="text-primary-color"> Skills</span>
+      </h2>
+      <div className="text-text-color mx-auto sm:w-[640px] w-auto flex justify-evenly">
+        {tabsData.map((tab, index) => (
+          <button onClick={() => handleClick(index)}
+          key={index} className={`py-2.5 px-6 rounded-md  duration-500 font-semibold text-base ${ selectedComponent === index
+              ? 'bg-primary-color text-[#081B29] '
+              : '  bg-secondary-color text-primary-color hover:bg-[#0C2E47] hover:text-blue-200 ' }`}>
+          {tab}
+        </button>
+        ))}
+      </div>
+      <div>
+        <div className=" lg:px-5 mx-auto gap-4 py-9 rounded-2xl flex justify-center">
+          {selectedComponent === 0 && (
+            <div className="grid grid-cols-2 xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 md:w-3/4 gap-5 sm:gap-6">
+              {imagesData.map((image, index) => (
+                <div
+                  className="w-[140px] h-[170px] p-4  border-2 border-[rgba(0,172,240,0.49)] bg-transparent rounded-xl"
+                  key={index}>
+                  <img className="mx-auto" src={image.url} border="0" />
+                  <p className="text-base mt-4 font-bold text-center text-[#EDEDED]">
+                    {image.title}
                   </p>
                 </div>
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
-                  </p>
-                </div>
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
-                  </p>
-                </div>
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
-                  </p>
-                </div>
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
-                  </p>
-                </div>
-                <div className="relative w-[140px] p-4 mx-auto border-2 border-primary-color bg-transparent rounded-xl">
-                  <Circle
-                    style={{ margin: 10, width: 90 }}
-                    strokeWidth={10}
-                    percent={percent}
-                  ></Circle>
-                  <div className="absolute left-1/2 top-1/2 -translate-y-[90%] -translate-x-1/3  text-[#EDEDED] text-base font-bold">
-                    {percent} %
-                  </div>
-                  <p className="text-base font-bold text-center text-[#EDEDED]">
-                    Tailwind css
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-
-            <div className="lg:w-5/12 w-full">
-              <h2 className=" mb-5 py-5 md:p-0 text-[25px] font-bold text-text-color">
-                My creative
-                <span className="text-primary-color">
-                  {" "}
-                  skills & experiences.
-                </span>
-              </h2>
-              <div className="relative w-full after:absolute after:-left-5 after:top-0 after:z-10 after:h-full after:w-2 after:transition-transform after:content-[''] after:bottom-2 after:border-primary-color after:border-l-4">
-                <div className="relative after:absolute after:-left-[30px] after:z-40 after:-top-1 after:h-5 after:bg-primary-color after:rounded-full after:w-5 after:transition-transform after:content-[''] rounded-lg p-4 border-2 border-primary-color">
-                  <h2 className="text-text-color font-bold text-xl">
-                    Real-Time Applications:
-                  </h2>
-                  <p className="text-text-color font-medium mt-1 text-base">
-                    If you have experience with real-time features like chat
-                    applications or notifications using technologies like
-                    WebSockets, emphasize this creativity and interactivity.
-                  </p>
+          )}
+          {selectedComponent === 1 && (
+            <div className="flex flex-wrap md:w-3/4 gap-5 sm:gap-6">
+              {backend.map((image, index) => (
+                <div className="w-[140px] h-[170px] p-4 mx-auto sm:m-0 lg:mx-auto border-2 border-[rgba(0,172,240,0.49)] bg-transparent rounded-xl"
+                key={index}>
+                <img className="mx-auto" src={image.url} border="0" />
+                <p className="text-base mt-4 font-bold text-center text-[#EDEDED]">
+                  {image.title}
+                </p>
                 </div>
-              </div>
-              
-              <div className="relative w-full py-4 after:absolute after:-left-5 after:top-0 after:z-10 after:h-full after:w-2 after:transition-transform after:content-[''] after:bottom-2 after:border-primary-color after:border-l-4">
-                <div className="relative after:absolute after:-left-[30px] after:z-40 after:-top-1 after:h-5 after:bg-primary-color after:rounded-full after:w-5 after:transition-transform after:content-[''] rounded-lg p-4 border-2 border-primary-color">
-                  <h2 className="text-text-color font-bold text-xl">
-                    Real-Time Applications:
-                  </h2>
-                  <p className="text-text-color font-medium mt-1 text-base">
-                    If you have experience with real-time features like chat
-                    applications or notifications using technologies like
-                    WebSockets, emphasize this creativity and interactivity.
-                  </p>
-                </div>
-              </div>
-              <div className="relative w-full after:absolute after:-left-5 after:top-0 after:z-10 after:h-full after:w-2 after:transition-transform after:content-[''] after:bottom-2 after:border-primary-color after:border-l-4">
-                <div className="relative after:absolute after:-left-[30px] after:z-40 after:-top-1 after:h-5 after:bg-primary-color after:rounded-full after:w-5 after:transition-transform after:content-[''] rounded-lg p-4 border-2 border-primary-color">
-                  <h2 className="text-text-color font-bold text-xl">
-                    Real-Time Applications:
-                  </h2>
-                  <p className="text-text-color font-medium mt-1 text-base">
-                    If you have experience with real-time features like chat
-                    applications or notifications using technologies like
-                    WebSockets, emphasize this creativity and interactivity.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-          </div>
-        </>
-      </>
-    );
-  }
-}
+          )}
+          {selectedComponent === 2 && (
+            <div className="flex flex-wrap md:w-3/4 gap-5 sm:gap-6">
+              {other.map((image, index) => (
+                <div className="w-[140px] h-[170px] p-4 mx-auto sm:m-0 lg:mx-auto border-2 border-[rgba(0,172,240,0.49)] bg-transparent rounded-xl"
+                key={index}>
+                <img className="mx-auto" src={image.url} border="0" />
+                <p className="text-base mt-4 font-bold text-center text-[#EDEDED]">
+                  {image.title}
+                </p>
+                </div>
+              ))}
+            </div>
+          )}
+          
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Skill;

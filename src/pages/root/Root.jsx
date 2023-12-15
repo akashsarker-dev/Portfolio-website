@@ -13,7 +13,7 @@ const Root = () => {
       <Outlet></Outlet>
       {/* <ScrollUpButton /> */}
       <ScrollToTop showUnder={160}>
-        <MdOutlineKeyboardArrowUp className='text-primary-color text-4xl h-10 w-10 bg-[#081b29] rounded-full border-2 border-primary-color'></MdOutlineKeyboardArrowUp>
+        <MdOutlineKeyboardArrowUp className='text-primary-color text-4xl h-10 w-10 bg-[#081b29] rounded-full border-2 border-primary-color hover:bg-primary-color hover:text-[#081b29] duration-500'></MdOutlineKeyboardArrowUp>
     </ScrollToTop>
       <CopyRight></CopyRight>
 

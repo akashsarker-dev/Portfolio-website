@@ -60,7 +60,7 @@ const Contact = () => {
 
   
   return (
-    <div className="md:py-20 py-12">
+    <div className="md:py-20 py-12 px-1">
       <h2 className="text-center text-3xl md:text-4xl md:text-[50px] mb-12 md:mb-[90px] font-bold text-text-color">
         Contact <span className="text-primary-color">Me</span>
       </h2>

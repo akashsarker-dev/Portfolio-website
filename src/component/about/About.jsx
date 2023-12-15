@@ -1,7 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutImg from '../../assets/about.png'
-import Tabs from '../../component/tabs/Tabs'
 AOS.init();
 
 
@@ -29,7 +28,6 @@ const About = () => {
         
       </div>
     </div>
-      <Tabs></Tabs>
         </>
   )
 }
