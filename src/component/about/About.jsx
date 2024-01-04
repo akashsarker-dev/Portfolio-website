@@ -19,7 +19,7 @@ const About = () => {
        <div className='flex flex-col items-center'>
        <h3 className=' text-text-color text-3xl font-bold '>Frontend Developer</h3>
         
-        <p className='text-center line-clamp-3 mb-5 text-text-color py-6'>I'm passionate about creating beautiful, functional, and user-friendly websites and applications, and I'm constantly pushing myself to learn and grow as a developer. Love building full-stack projects.</p>
+        <p className='text-center line-clamp-3 mb-5 text-text-color py-6 w-auto sm:w-[700px]'>I'm passionate about creating beautiful, functional, and user-friendly websites and applications, and I'm constantly pushing myself to learn and grow as a developer. Love building full-stack projects.</p>
 
         <button id="btn" className="relative after:absolute overflow-hidden py-3 px-7 bg-transparent border-2 font-semibold text-primary-color rounded-lg   border-primary-color  hover:text-[#081B29] after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:transition-transform after:duration-500 after:content-[''] duration-500
         after:origin-top-left after:hover:scale-x-100 after:scale-x-0
