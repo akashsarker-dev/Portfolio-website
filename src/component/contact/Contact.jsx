@@ -29,9 +29,9 @@ const Contact = () => {
       subject: formData.subject_name,
     };
 
-    const serviceId = 'service_tw4tzqu';
-    const templateId = 'template_50878gn';
-    const userId = 'aibuKa_1To9LUCPDK';
+    const serviceId = 'service_v5t06jv';
+    const templateId = 'template_rop9url';
+    const userId = 'PpgQRYWG2mSxzfg4u';
 
     emailjs.send(serviceId, templateId, templateParams, userId)
       .then((response) => {
@@ -50,7 +50,6 @@ const Contact = () => {
           user_email: '',
           message: '',
           subject_name: ''
-          
         })
       })
       .catch((error) => {
@@ -88,9 +87,8 @@ const Contact = () => {
               <h3 className="text-text-color text-lg font-semibold">Email</h3>
               <a
                 href="mailto:akashsarkeronline@gmail.com"
-                className="text-lg text-[rgba(237,237,237,0.8)]"
-              >
-                akashsarkeronline@gmail.com
+                className="text-lg text-[rgba(237,237,237,0.8)]" >
+                akashsarker.dev@gmail.com
               </a>
             </div>
           </div>

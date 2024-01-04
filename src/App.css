@@ -20,12 +20,18 @@ body{
     transition-duration: .5s;
 }
 
-.swiper-slide {
-  width: fit-content !important;
+/* For Chrome, Safari, and newer versions of Edge */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
 }
-.rc-progress-circle-trail{
-  stroke-width: 10px;
-  stroke: #173F5C!important;
+
+::-webkit-scrollbar-track {
+  background-color: #0C2E47; /* Color of the track (the area behind the thumb) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #17659c; /* Color of the thumb (the draggable part) */
+  border-radius: 6px; /* Rounded corners of the thumb */
 }
 
 /* #btn{

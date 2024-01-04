@@ -4,7 +4,6 @@ import About from "../../component/about/About.jsx";
 import Skill from "../../component/skill/Skill.jsx";
 import Project from "../../component/project/Project.jsx";
 import Contact from "../../component/contact/Contact.jsx";
-import CopyRight from "../../component/copyright/CopyRight.jsx";
 
 const Home = () => {
   return (

@@ -1,17 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BannerImg from '../../assets/banner.png';
 AOS.init();
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from "react-router-dom";
 
 
 
 const Banner = () => {
+  const [text, setText] = useState('');
+
+  const handleInputChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleSpeak = () => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(utterance);
+  }
   return (
     <>
+    
       <div className="flex px-2 max-w-container mx-auto pt-5 items-center ">
+      
         <div className="sm:w-1/2 md:py-20  py-14"
           data-aos="zoom-in-left"
           data-aos-duration="2000">
@@ -44,9 +57,16 @@ const Banner = () => {
             </button>
           </div>
           <div className="flex  gap-x-6 text-4xl sm:mt-10 md:mt-8">
+            <Link to='https://www.facebook.com/akashsarker.new/'>
+            
             <BsFacebook className=" rounded-full outline-2 outline-primary-color text-primary-color outline outline-offset-2 p-1"></BsFacebook>
+            </Link>
+            <Link to='https://github.com/akashsarker-dev'>
             <BsGithub className="rounded-full outline-2 outline-primary-color text-primary-color outline outline-offset-2 p-1"></BsGithub>
+            </Link>
+            <Link to='https://www.linkedin.com/in/akashsarker/'>
             <BsLinkedin className="rounded-full outline-2 outline-primary-color text-primary-color outline outline-offset-2 p-1"></BsLinkedin>
+            </Link>
           </div>
         </div>
         <div className="sm:w-1/2 hidden sm:block" data-aos="zoom-in-right" data-aos-duration="2000">
@@ -57,6 +77,7 @@ const Banner = () => {
           />
         </div>
       </div>
+     
     </>
   );
 };
